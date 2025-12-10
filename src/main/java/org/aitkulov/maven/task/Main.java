@@ -7,8 +7,6 @@ import org.aitkulov.maven.task.shape.Triangle;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-
         Circle circle = new Circle(5);
         printAreaAndPerimeterInfo(Circle.class.getSimpleName(), circle);
 
@@ -21,6 +19,6 @@ public class Main {
 
     private static void printAreaAndPerimeterInfo(String shapeName, Shape shapeToProcess) {
         System.out.println("Area of " + shapeName + " is " + shapeToProcess.calculateArea());
-        System.out.println("Perimeter of " + shapeName + " is " + shapeToProcess.calculatePerimeter());
+        System.out.println("Perimeter of " + shapeName + " is " + shapeToProcess.calculatePerimeter() + "\n");
     }
 }
