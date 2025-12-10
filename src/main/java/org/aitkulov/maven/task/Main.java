@@ -1,7 +1,26 @@
 package org.aitkulov.maven.task;
 
+import org.aitkulov.maven.task.shape.Circle;
+import org.aitkulov.maven.task.shape.Rectangle;
+import org.aitkulov.maven.task.shape.Shape;
+import org.aitkulov.maven.task.shape.Triangle;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+
+        Circle circle = new Circle(5);
+        printAreaAndPerimeterInfo(Circle.class.getSimpleName(), circle);
+
+        Rectangle rectangle = new Rectangle(5, 10);
+        printAreaAndPerimeterInfo(Rectangle.class.getSimpleName(), rectangle);
+
+        Triangle triangle = new Triangle(5, 12, 15);
+        printAreaAndPerimeterInfo(Triangle.class.getSimpleName(), triangle);
+    }
+
+    private static void printAreaAndPerimeterInfo(String shapeName, Shape shapeToProcess) {
+        System.out.println("Area of " + shapeName + " is " + shapeToProcess.calculateArea());
+        System.out.println("Perimeter of " + shapeName + " is " + shapeToProcess.calculatePerimeter());
     }
 }
