@@ -18,8 +18,8 @@ public class Main {
         Triangle triangle = new Triangle(5, 12, 15);
         printAreaAndPerimeterInfo(Triangle.class.getSimpleName(), triangle);
 
-        String resultOfComparing1 = ShapeUtils.compareByAndGetInfo(rectangle, circle, GeometricQuantities.AREA);
-        String resultOfComparing2 = ShapeUtils.compareByAndGetInfo(rectangle, circle, GeometricQuantities.PERIMETER);
+        String resultOfComparing1 = ShapeUtils.compareByQuantityAndGetInfo(rectangle, circle, GeometricQuantities.AREA);
+        String resultOfComparing2 = ShapeUtils.compareByQuantityAndGetInfo(rectangle, circle, GeometricQuantities.PERIMETER);
 
         System.out.println(resultOfComparing1);
         System.out.println(resultOfComparing2);
